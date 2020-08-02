@@ -53,9 +53,7 @@ sed -i "s/ga-framework-template/${REPO}/g" README.md
 sed -i "s/technote-space\/ga-framework-template/${OWNER}\/${REPO}/g" package.json
 sed -i "s/Template for GitHub actions\./${DESCRIOTION}/g" README.md
 sed -i "s/Template for GitHub actions\./${DESCRIOTION}/g" package.json
-sed -i "s/Template for GitHub actions\./${DESCRIOTION}/g" action.yml
 sed -i "s/GitHub Actions Template/${TITLE}/g" README.md
-sed -i "s/GitHub Actions Template/${TITLE}/g" action.yml
 
 if [[ "${OWNER}" != 'technote-space' ]]; then
   rm -rdf .github
