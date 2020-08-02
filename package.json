@@ -1,0 +1,82 @@
+{
+  "name": "@technote-space/ga-framework-template",
+  "version": "0.0.1",
+  "description": "Genetic Algorithm",
+  "author": {
+    "name": "Technote",
+    "email": "technote.space@gmail.com",
+    "url": "https://technote.space"
+  },
+  "keywords": [
+    "automatic programming"
+  ],
+  "homepage": "https://github.com/technote-space/ga-framework-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/technote-space/ga-framework-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/technote-space/ga-framework-template/issues"
+  },
+  "main": "build/index.js",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@technote-space/ga-framework": "^0.14.2",
+    "@technote-space/genetic-algorithms-js": "^0.8.2",
+    "axios": "^0.19.2",
+    "file-saver": "^2.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "sprintf-js": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-react-inline-elements": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-flow": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@types/file-saver": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-i18next-extract": "^0.7.2",
+    "babel-plugin-react-html-attrs": "^3.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "copy-webpack-plugin": "^6.0.3",
+    "eslint": "^7.6.0",
+    "eslint-plugin-react": "^7.20.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
+    "license-checker-webpack-plugin": "^0.1.5",
+    "lint-staged": "^10.2.11",
+    "terser-webpack-plugin": "^3.0.8",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9",
+    "write-file-webpack-plugin": "^4.5.1"
+  },
+  "port": 5000,
+  "scripts": {
+    "setup": "if [[ $(uname -s) == 'Darwin' ]]; then BASH_ENV=~/.bashrc bash -O expand_aliases bin/setup.sh; else bash bin/setup.sh; fi && if [[ -f __DELETE__ ]]; then rm -rdf bin __DELETE__; fi",
+    "lint": "eslint './src/**/*.{ts,js,jsx}' --cache",
+    "lint:fix": "eslint './src/**/*.{ts,js,jsx}' --fix",
+    "check-types": "tsc",
+    "watch": "yarn kill && NODE_ENV=none DEV_SERVER_PORT=$npm_package_port webpack-dev-server -d --progress",
+    "dev": "yarn clear && NODE_ENV=development  webpack --progress --config webpack.dev.js",
+    "build": "yarn clear && NODE_ENV=production webpack --progress --config webpack.prod.js",
+    "kill": "lsof -i:$npm_package_port -t | xargs kill -9",
+    "clear": "rm -rf build*",
+    "clean": "rm -rf node_modules* build*",
+    "update": "npx ncu -u && yarn install && yarn upgrade && yarn audit"
+  }
+}
