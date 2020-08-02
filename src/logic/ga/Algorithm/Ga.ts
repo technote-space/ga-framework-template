@@ -24,7 +24,6 @@ export abstract class Ga extends GeneticAlgorithmBase<UpdateResult> {
   }
 
   public async init(context: Context): Promise<void> {
-    console.log(context);
     const testData             = new TestData(context.length);
     const culturalIslandNumber = Math.floor(context.islandNumber * context.culturalIslandRate);
     const islandNumber         = context.islandNumber - culturalIslandNumber;
