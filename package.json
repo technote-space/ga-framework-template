@@ -8,7 +8,7 @@
     "url": "https://technote.space"
   },
   "keywords": [
-    "automatic programming"
+    "genetic algorithm"
   ],
   "homepage": "https://github.com/technote-space/ga-framework-template",
   "repository": {
@@ -44,7 +44,6 @@
     "@typescript-eslint/eslint-plugin": "^3.7.1",
     "@typescript-eslint/parser": "^3.7.1",
     "babel-loader": "^8.1.0",
-    "babel-plugin-i18next-extract": "^0.7.2",
     "babel-plugin-react-html-attrs": "^3.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "copy-webpack-plugin": "^6.0.3",
