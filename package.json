@@ -1,7 +1,7 @@
 {
   "name": "@technote-space/ga-framework-template",
   "version": "0.0.1",
-  "description": "Genetic Algorithm",
+  "description": "Template of GA Framework.",
   "author": {
     "name": "Technote",
     "email": "technote.space@gmail.com",

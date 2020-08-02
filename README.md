@@ -1,10 +1,10 @@
-# Hello Genetic Algorithm
+# Genetic Algorithm Template
 
 [![CI Status](https://github.com/technote-space/ga-framework-template/workflows/CI/badge.svg)](https://github.com/technote-space/ga-framework-template/actions)
 [![CodeFactor](https://www.codefactor.io/repository/github/technote-space/ga-framework-template/badge)](https://www.codefactor.io/repository/github/technote-space/ga-framework-template)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/technote-space/ga-framework-template/blob/master/LICENSE)
 
-Sample of GA Framework
+Template of GA Framework.
 
 ## Table of Contents
 
