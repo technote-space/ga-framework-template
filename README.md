@@ -13,6 +13,9 @@ Template of GA Framework.
 <details>
 <summary>Details</summary>
 
+- [Setup](#setup)
+  - [yarn](#yarn)
+  - [npm](#npm)
 - [Demo](#demo)
 - [Framework](#framework)
 - [Author](#author)
