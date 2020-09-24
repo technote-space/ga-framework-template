@@ -1,7 +1,7 @@
-const webpack      = require(`webpack`);
-const {merge}      = require(`webpack-merge`);
-const terserPlugin = require(`terser-webpack-plugin`);
-const commonConfig = require(`./webpack.common.js`);
+const webpack      = require('webpack');
+const {merge}      = require('webpack-merge');
+const terserPlugin = require('terser-webpack-plugin');
+const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
   plugins: [
@@ -12,7 +12,7 @@ module.exports = merge(commonConfig, {
   optimization: {
     minimizer: [
       new terserPlugin({
-        extractComments: `all`,
+        extractComments: 'all',
         terserOptions: {
           compress: {
             drop_console: true,

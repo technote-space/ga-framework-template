@@ -6,13 +6,14 @@ export class LocalSearch extends ReinsertionBase {
   }
 
   public select(population: Array<IChromosome>, offspring: Array<IChromosome>, parents: Array<IChromosome>): Array<IChromosome> {
+    const sortedOffspring: Array<IChromosome> = [...offspring];
     if (this.addParentsToOffspring) {
-      offspring.push(...parents);
+      sortedOffspring.push(...parents);
     }
-    offspring.sort((chromosome1, chromosome2) => chromosome2.fitness - chromosome1.fitness);
+    sortedOffspring.sort((chromosome1, chromosome2) => chromosome2.fitness - chromosome1.fitness);
 
     const selected = [...population];
-    selected.push(offspring.splice(0, 1)[0]); // elite
+    selected.push(sortedOffspring.splice(0, 1)[0]); // elite
 
     return selected;
   }

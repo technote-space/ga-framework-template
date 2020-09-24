@@ -6,14 +6,15 @@ export class Mgg extends ReinsertionBase {
   }
 
   public select(population: Array<IChromosome>, offspring: Array<IChromosome>, parents: Array<IChromosome>): Array<IChromosome> {
+    const sortedOffspring: Array<IChromosome> = [...offspring];
     if (this.addParentsToOffspring) {
-      offspring.push(...parents);
+      sortedOffspring.push(...parents);
     }
-    offspring.sort((chromosome1, chromosome2) => (chromosome2.fitness ?? -1.0) - (chromosome1.fitness ?? -1.0));
+    sortedOffspring.sort((chromosome1, chromosome2) => (chromosome2.fitness ?? -1.0) - (chromosome1.fitness ?? -1.0));
 
     const selected = [...population];
-    selected.push(offspring.splice(0, 1)[0]); // elite
-    selected.push(this.take(offspring));
+    selected.push(sortedOffspring.splice(0, 1)[0]); // elite
+    selected.push(this.take(sortedOffspring));
 
     return selected;
   }

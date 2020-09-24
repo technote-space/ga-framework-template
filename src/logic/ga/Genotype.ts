@@ -1,28 +1,20 @@
-import {Acid, ChromosomeBase} from '@technote-space/genetic-algorithms-js';
-import {Phenotype} from './Phenotype';
+import {Acid, ChromosomeBase, IChromosome} from '@technote-space/genetic-algorithms-js';
 
 export class Genotype extends ChromosomeBase {
-  private _phenotype: Phenotype | undefined = undefined;
+  protected _fitness: number;
 
   public constructor() {
     super(0, true);
+    this._fitness = -1;
     this.generateAcids();
   }
 
   public get fitness(): number {
-    return this.phenotype.fitness;
+    return this._fitness;
   }
 
-  public set fitness(_: number) {
-    //
-  }
-
-  public get phenotype(): Phenotype {
-    if (!this._phenotype) {
-      this._phenotype = new Phenotype(this);
-    }
-
-    return this._phenotype;
+  public set fitness(fitness: number) {
+    this._fitness = fitness;
   }
 
   public createNew(): ChromosomeBase {
@@ -36,5 +28,9 @@ export class Genotype extends ChromosomeBase {
 
   public getGenes(): Array<number> {
     return [...Array(this.length).keys()].map(index => Number(this.getAcid(index).value));
+  }
+
+  protected performCopyFrom(_from: IChromosome): void {
+    this._fitness = _from.fitness;
   }
 }

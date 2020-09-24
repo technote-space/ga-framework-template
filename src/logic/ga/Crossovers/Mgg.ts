@@ -1,6 +1,9 @@
 import {CrossoverBase, IChromosome} from '@technote-space/genetic-algorithms-js';
+import {Genotype} from '../Genotype';
 
 export class Mgg extends CrossoverBase {
+  private _pool: Array<IChromosome> = [];
+
   public constructor(probability: number, private readonly mixProbability: number, private readonly crossoverTime: number) {
     super(2, crossoverTime * 2, probability);
 
@@ -9,15 +12,22 @@ export class Mgg extends CrossoverBase {
       this.mixProbability = 1 - mixProbability;
     }
     this.mixProbability = Math.min(Math.max(this.mixProbability, 0), 0.5);
+
+    [...Array(this.childrenNumber)].forEach(() => {
+      this._pool.push(new Genotype());
+    });
   }
 
   protected performCross(parents: Array<IChromosome>, probability: number): Array<IChromosome> {
     const parent1 = parents[0];
     const parent2 = parents[1];
 
-    return [...Array(this.crossoverTime)].flatMap(() => {
-      const child1 = parent1.clone();
-      const child2 = parent2.clone();
+    let index = 0;
+    [...Array(this.crossoverTime)].forEach(() => {
+      const child1 = this._pool[index++];
+      const child2 = this._pool[index++];
+      child1.copyFrom(parent1);
+      child2.copyFrom(parent2);
 
       if (probability > 0 && Math.random() < probability) {
         const len    = Math.min(parent1.length, parent2.length);
@@ -30,8 +40,8 @@ export class Mgg extends CrossoverBase {
           }
         }
       }
-
-      return [child1, child2];
     });
+
+    return this._pool;
   }
 }
