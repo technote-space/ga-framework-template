@@ -76,6 +76,6 @@
     "kill": "lsof -i:$npm_package_port -t | xargs kill -9",
     "clear": "rm -rf build*",
     "clean": "rm -rf node_modules* build*",
-    "update": "npx ncu -u && yarn install && yarn upgrade && yarn audit"
+    "update": "npx npm-check-updates -u && yarn install && yarn upgrade && yarn audit"
   }
 }
