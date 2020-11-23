@@ -2,6 +2,7 @@ const {merge}                     = require('webpack-merge');
 const licenseCheckerWebpackPlugin = require('license-checker-webpack-plugin');
 
 module.exports = merge(require('@technote-space/ga-framework/webpack.common'), {
+  resolve: {symlinks: false},
   plugins: [
     ...(process.env.NODE_ENV === 'production' ? [
       new licenseCheckerWebpackPlugin({

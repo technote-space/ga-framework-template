@@ -1,6 +1,6 @@
 import {IAlgorithm, TerminationBase} from '@technote-space/genetic-algorithms-js';
 
-export class Termination<InputT, OutputT> extends TerminationBase {
+export class Termination extends TerminationBase {
   public constructor(private offspringNumber: number) {
     super();
   }

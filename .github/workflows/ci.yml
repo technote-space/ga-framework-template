@@ -19,12 +19,7 @@ jobs:
       - uses: technote-space/get-git-comment-action@v1
       - uses: technote-space/get-diff-action@v4
         with:
-          PREFIX_FILTER: |
-            src/
-            __tests__/
-          SUFFIX_FILTER: |
-            .js
-            .ts
+          PATTERNS: +(src|__tests__)/**/*.+(js|ts)
           FILES: .eslintrc
         if: "! contains(env.COMMIT_MESSAGE, '[skip ci]') && ! contains(env.COMMIT_MESSAGE, '[ci skip]')"
       - name: Set running flag
@@ -68,13 +63,7 @@ jobs:
       - uses: technote-space/get-git-comment-action@v1
       - uses: technote-space/get-diff-action@v4
         with:
-          PREFIX_FILTER: |
-            src/
-            __tests__/
-          SUFFIX_FILTER: |
-            .js
-            .ts
-            .snap
+          PATTERNS: +(src|__tests__)/**/*.+(js|ts|snap)
           FILES: |
             yarn.lock
             jest.config.js
