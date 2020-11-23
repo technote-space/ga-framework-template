@@ -61,8 +61,7 @@
     "webpack": "^5.6.0",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.4.0",
-    "write-file-webpack-plugin": "^4.5.1"
+    "webpack-merge": "^5.4.0"
   },
   "port": 5000,
   "scripts": {
@@ -70,7 +69,7 @@
     "lint": "eslint './src/**/*.{ts,js,jsx}' --cache",
     "lint:fix": "eslint './src/**/*.{ts,js,jsx}' --fix",
     "check-types": "tsc",
-    "watch": "yarn kill && NODE_ENV=none DEV_SERVER_PORT=$npm_package_port webpack-dev-server -d --progress",
+    "watch": "yarn kill && NODE_ENV=none DEV_SERVER_PORT=$npm_package_port webpack serve",
     "dev": "yarn clear && NODE_ENV=development  webpack --progress --config webpack.dev.js",
     "build": "yarn clear && NODE_ENV=production webpack --progress --config webpack.prod.js",
     "kill": "lsof -i:$npm_package_port -t | xargs kill -9",
