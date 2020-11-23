@@ -1251,17 +1251,17 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@technote-space/ga-framework@^0.14.8":
-  version "0.14.8"
-  resolved "https://registry.yarnpkg.com/@technote-space/ga-framework/-/ga-framework-0.14.8.tgz#9b1c07772b0e7692cd778c34a4b270685bd9d2ad"
-  integrity sha512-K1UM4+EyHwyj9saoBfWmMfeeUYBkoF8r2l/EaNakrLCN8EmEqQKX8RUZOWFoTys03JUcdA1wxQ3LBAMtmIvlTA==
+"@technote-space/ga-framework@^0.14.10":
+  version "0.14.10"
+  resolved "https://registry.yarnpkg.com/@technote-space/ga-framework/-/ga-framework-0.14.10.tgz#456e9419e986f9f8da0e41101dcb43b26cf19213"
+  integrity sha512-MbplcmFbdFHqlSfInj6yHagOR8Qt5UNxrhapxKnHRJqx3X3A40LA5axXKwR6J/M6KfGnD49hulWovloPy9vvig==
   dependencies:
     "@egjs/hammerjs" "^2.0.17"
     "@material-ui/core" "^4.11.0"
     "@material-ui/icons" "^4.9.1"
     "@mui-treasury/layout" "^4.5.0"
-    "@technote-space/genetic-algorithms-js" "^0.8.9"
-    "@technote-space/worker-controller" "^0.5.8"
+    "@technote-space/genetic-algorithms-js" "^0.8.10"
+    "@technote-space/worker-controller" "^0.5.11"
     chart.js "^2.9.4"
     clsx "^1.1.1"
     keycharm "^0.4.0"
@@ -1270,16 +1270,16 @@
     react-dom "^17.0.1"
     react-helmet "^6.1.0"
     styled-components "^5.2.1"
-    vis-data "^7.1.0"
-    vis-network "^8.5.2"
+    vis-data "^7.1.1"
+    vis-network "^8.5.3"
     vis-util "^4.3.4"
 
-"@technote-space/genetic-algorithms-js@^0.8.10", "@technote-space/genetic-algorithms-js@^0.8.9":
+"@technote-space/genetic-algorithms-js@^0.8.10":
   version "0.8.10"
   resolved "https://registry.yarnpkg.com/@technote-space/genetic-algorithms-js/-/genetic-algorithms-js-0.8.10.tgz#b2c24919ffdbd3b0243bf8190d7d936e4359c175"
   integrity sha512-Siy8Lrvzo2ihVJ2A94vewhIExRFjgonMjsS7Y3h6bpSZ3PLkhBuce+LlkAVk+KiFtYb09Cb7GDrap3ItblcHkw==
 
-"@technote-space/worker-controller@^0.5.8":
+"@technote-space/worker-controller@^0.5.11":
   version "0.5.11"
   resolved "https://registry.yarnpkg.com/@technote-space/worker-controller/-/worker-controller-0.5.11.tgz#c59c172d54d0f2265a55df6a88474234d54750db"
   integrity sha512-h2cIOFSI1lAqmQGyQtfroyZFF25+pbXX4ioXv37wptBIVjtq8xXnNff24FxRCLZSKh8dweoVHnC/el6cH0OqUg==
@@ -7103,12 +7103,12 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vis-data@^7.1.0:
+vis-data@^7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/vis-data/-/vis-data-7.1.1.tgz#a38b38efcc0b721181ddaa4f4359edfd75623825"
   integrity sha512-Z5+caySDqoKL9yxbI3c/CKmUcSvROSZstuvwxbOsUpdxHpxFYEUgxC1EH4lSB1ykEaM54MVMM1UcwB9oNaWFlw==
 
-vis-network@^8.5.2:
+vis-network@^8.5.3:
   version "8.5.3"
   resolved "https://registry.yarnpkg.com/vis-network/-/vis-network-8.5.3.tgz#3c938806ea95ed48d502c58826d557057e2b1120"
   integrity sha512-6Lvu7hWjm7tJS5b+b/U0GVDx75QdlknRKmGwvVQosN4pc3HjzU3vXB+yXfqNHIxk5eQuWCQT+/GsE4GGF2BkDg==

@@ -21,7 +21,7 @@
   "main": "build/index.js",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
-    "@technote-space/ga-framework": "^0.14.8",
+    "@technote-space/ga-framework": "^0.14.10",
     "@technote-space/genetic-algorithms-js": "^0.8.10",
     "axios": "^0.21.0",
     "file-saver": "^2.0.5",
