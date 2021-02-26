@@ -30,7 +30,10 @@
     "lint:fix": "eslint './src/**/*.{ts,js,jsx}' --fix",
     "setup": "if [[ $(uname -s) == 'Darwin' ]]; then BASH_ENV=~/.bashrc bash -O expand_aliases bin/setup.sh; else bash bin/setup.sh; fi && if [[ -f __DELETE__ ]]; then rm -rdf bin __DELETE__; fi",
     "update": "npx npm-check-updates -u && yarn install && yarn upgrade && yarn audit",
-    "watch": "yarn kill && NODE_ENV=none DEV_SERVER_PORT=$npm_package_port webpack serve"
+    "watch": "yarn kill && NODE_ENV=none DEV_SERVER_PORT=$npm_package_port webpack serve",
+    "postinstall": "[ -n \"$CI\" ] || [ ! -f node_modules/.bin/husky ] || husky install",
+    "prepublishOnly": "[ -n \"$CI\" ] || [ ! -f node_modules/.bin/pinst ] || pinst --disable",
+    "postpublish": "[ -n \"$CI\" ] || [ ! -f node_modules/.bin/pinst ] || pinst --enable"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
@@ -66,9 +69,10 @@
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.0",
     "html-webpack-plugin": "^5.2.0",
-    "husky": "^5.0.9",
+    "husky": "^5.0.0",
     "license-checker-webpack-plugin": "^0.2.1",
     "lint-staged": "^10.5.4",
+    "pinst": "^2.1.6",
     "terser-webpack-plugin": "^5.1.1",
     "typescript": "^4.1.5",
     "webpack": "^5.23.0",
