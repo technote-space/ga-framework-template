@@ -1,10 +1,10 @@
 import {GaIsland} from './GaIsland';
 import {ICrossover, IReinsertion, ISelection} from '@technote-space/genetic-algorithms-js';
-import {LocalSearch as LocalSearchCrossover} from '../Crossovers/LocalSearch';
-import {LocalSearch as LocalSearchReinsertion} from '../Reinsertion/LocalSearch';
-import {LocalSearch as LocalSearchSelection} from '../Selection/LocalSearch';
-import {TestData} from '../TestData/TestData';
-import {Context} from '../../types';
+import {LocalSearch as LocalSearchCrossover} from '#/Crossovers/LocalSearch';
+import {LocalSearch as LocalSearchReinsertion} from '#/Reinsertion/LocalSearch';
+import {LocalSearch as LocalSearchSelection} from '#/Selection/LocalSearch';
+import {TestData} from '#/TestData/TestData';
+import {Context} from '$/types';
 
 export class LocalSearchIsland extends GaIsland {
   private readonly _crossover: ICrossover;

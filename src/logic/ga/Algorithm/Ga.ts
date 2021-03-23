@@ -1,15 +1,15 @@
 import {GeneticAlgorithmBase} from '@technote-space/ga-framework/dist/app/logic/Algorithm';
 import {ITermination, IMigration} from '@technote-space/genetic-algorithms-js';
-import {Genotype} from '../Genotype';
-import {Phenotype} from '../Phenotype';
-import {Termination} from '../Termination';
-import {Migration} from '../Migration';
-import {UpdateResult, Context} from '../../types';
-import {MggIsland} from '../Island/MggIsland';
-// import {LocalSearchIsland} from '../Island/LocalSearchIsland';
-import {CulturalIsland} from '../Island/CulturalIsland';
-import {GaIsland} from '../Island/GaIsland';
-import {TestData} from '../TestData/TestData';
+import {Genotype} from '#/Genotype';
+import {Phenotype} from '#/Phenotype';
+import {Termination} from '#/Termination';
+import {Migration} from '#/Migration';
+import {UpdateResult, Context} from '$/types';
+import {MggIsland} from '#/Island/MggIsland';
+// import {LocalSearchIsland} from '#/Island/LocalSearchIsland';
+import {CulturalIsland} from '#/Island/CulturalIsland';
+import {GaIsland} from '#/Island/GaIsland';
+import {TestData} from '#/TestData/TestData';
 
 export abstract class Ga extends GeneticAlgorithmBase<UpdateResult> {
   private readonly _islands: Array<GaIsland>;

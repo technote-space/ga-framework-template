@@ -1,4 +1,4 @@
-import {Ga} from './logic/ga/Algorithm/Ga';
+import {Ga} from '#/Algorithm/Ga';
 
 global['GeneticAlgorithm'] = class GeneticAlgorithm extends Ga {
 };

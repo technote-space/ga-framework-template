@@ -4,11 +4,11 @@ import {
   IPopulation,
   IslandBase,
 } from '@technote-space/genetic-algorithms-js';
-import {Population} from '../Population';
-import {TestData} from '../TestData/TestData';
-import {Genotype} from '../Genotype';
-import {Fitness} from '../Fitness';
-import {Mutation} from '../Mutation';
+import {Population} from '#/Population';
+import {TestData} from '#/TestData/TestData';
+import {Genotype} from '#/Genotype';
+import {Fitness} from '#/Fitness';
+import {Mutation} from '#/Mutation';
 
 export abstract class GaIsland extends IslandBase {
   private readonly _fitness: IFitness;

@@ -1,10 +1,10 @@
 import {GaIsland} from './GaIsland';
 import {ICrossover, IReinsertion, ISelection} from '@technote-space/genetic-algorithms-js';
-import {Cultural as CulturalCrossover} from '../Crossovers/Cultural';
-import {Cultural as CulturalReinsertion} from '../Reinsertion/Cultural';
-import {Mgg as MggSelection} from '../Selection/Mgg';
-import {TestData} from '../TestData/TestData';
-import {Context} from '../../types';
+import {Cultural as CulturalCrossover} from '#/Crossovers/Cultural';
+import {Cultural as CulturalReinsertion} from '#/Reinsertion/Cultural';
+import {Mgg as MggSelection} from '#/Selection/Mgg';
+import {TestData} from '#/TestData/TestData';
+import {Context} from '$/types';
 
 export class CulturalIsland extends GaIsland {
   private readonly _crossover: ICrossover;
