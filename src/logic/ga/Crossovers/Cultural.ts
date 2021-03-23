@@ -1,5 +1,5 @@
 import {CrossoverBase, IChromosome} from '@technote-space/genetic-algorithms-js';
-import {Genotype} from '../Genotype';
+import {Genotype} from '#/Genotype';
 
 export class Cultural extends CrossoverBase {
   private _pool: Array<IChromosome> = [];

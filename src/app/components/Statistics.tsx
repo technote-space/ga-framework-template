@@ -1,4 +1,5 @@
-import React, {useMemo, FC} from 'react';
+import type {FC} from 'react';
+import React, {memo} from 'react';
 import {makeStyles, createStyles} from '@material-ui/core/styles';
 import {useStoreContext} from '@technote-space/ga-framework';
 import {sprintf} from 'sprintf-js';
@@ -14,11 +15,11 @@ const useStyles = makeStyles(() => createStyles({
   },
 }));
 
-const Statistics: FC = () => {
+const Statistics: FC = memo(() => {
   const {store: {logic: {fitness, progress}}} = useStoreContext();
   const classes                               = useStyles();
 
-  return useMemo(() => <div className={classes.wrap}>
+  return <div className={classes.wrap}>
     <div>
       <div className={classes.param}>
         Progress: {sprintf('%.4f', progress)}
@@ -27,7 +28,8 @@ const Statistics: FC = () => {
         Fitness: {sprintf('%.3f', fitness)}
       </div>
     </div>
-  </div>, [progress, classes]);
-};
+  </div>;
+});
 
+Statistics.displayName = 'Statistics';
 export default Statistics;
