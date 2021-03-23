@@ -1,4 +1,5 @@
-import React, {useMemo, useCallback, FC} from 'react';
+import type {FC} from 'react';
+import React, {memo, useCallback} from 'react';
 import axios from 'axios';
 import {saveAs} from 'file-saver';
 import {makeStyles, createStyles} from '@material-ui/core/styles';
@@ -16,7 +17,7 @@ const useStyles = makeStyles(() => createStyles({
   },
 }));
 
-const License: FC = () => {
+const License: FC = memo(() => {
   const classes     = useStyles();
   const handleClick = useCallback(async() => {
     const res  = await axios.get(license, {
@@ -26,9 +27,10 @@ const License: FC = () => {
     saveAs(blob, 'ThirdPartyNotices.txt');
   }, []);
 
-  return useMemo(() => <div className={classes.wrap}>
+  return <div className={classes.wrap}>
     <a onClick={handleClick} className={classes.link}>License</a>
-  </div>, [classes]);
-};
+  </div>;
+});
 
+License.displayName = 'License';
 export default License;
