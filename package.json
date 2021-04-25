@@ -46,7 +46,7 @@
     "sprintf-js": "^1.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.15",
+    "@babel/core": "^7.13.16",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
     "@babel/plugin-transform-react-inline-elements": "^7.12.13",
@@ -65,7 +65,7 @@
     "babel-plugin-react-html-attrs": "^3.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "copy-webpack-plugin": "^8.1.1",
-    "eslint": "^7.24.0",
+    "eslint": "^7.25.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
@@ -78,7 +78,7 @@
     "terser-webpack-plugin": "^5.1.1",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "typescript": "^4.2.4",
-    "webpack": "^5.33.2",
+    "webpack": "^5.35.1",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
