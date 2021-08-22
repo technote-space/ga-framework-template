@@ -1,6 +1,6 @@
 {
   "name": "@technote-space/ga-framework-template",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "Template of GA Framework.",
   "keywords": [
     "genetic algorithm"
