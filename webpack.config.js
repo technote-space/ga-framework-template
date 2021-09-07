@@ -12,10 +12,6 @@ module.exports = merge(commonConfig, {
   ],
   devtool: 'eval-source-map',
   devServer: {
-    disableHostCheck: true,
-    contentBase: path.resolve(__dirname, 'dist'),
-    inline: true,
-    watchContentBase: true,
     open: false,
     port: DEV_SERVER_PORT,
   },
