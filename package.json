@@ -1,6 +1,6 @@
 {
   "name": "@technote-space/ga-framework-template",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Template of GA Framework.",
   "keywords": [
     "genetic algorithm"
@@ -25,15 +25,15 @@
     "clean": "rm -rf node_modules* build*",
     "clear": "rm -rf build*",
     "dev": "yarn clear && NODE_ENV=development  webpack --progress --config webpack.dev.js",
+    "postinstall": "[ -n \"$CI\" ] || [ ! -f node_modules/.bin/husky ] || husky install",
     "kill": "lsof -i:$npm_package_port -t | xargs kill -9",
     "lint": "eslint './src/**/*.{ts,js,jsx}' --cache",
     "lint:fix": "eslint './src/**/*.{ts,js,jsx}' --fix",
+    "prepublishOnly": "[ -n \"$CI\" ] || [ ! -f node_modules/.bin/pinst ] || pinst --disable",
+    "postpublish": "[ -n \"$CI\" ] || [ ! -f node_modules/.bin/pinst ] || pinst --enable",
     "setup": "if [[ $(uname -s) == 'Darwin' ]]; then BASH_ENV=~/.bashrc bash -O expand_aliases bin/setup.sh; else bash bin/setup.sh; fi && if [[ -f __DELETE__ ]]; then rm -rdf bin __DELETE__; fi",
     "update": "npx npm-check-updates -u && yarn install && yarn upgrade && yarn audit",
-    "watch": "yarn kill && NODE_ENV=none DEV_SERVER_PORT=$npm_package_port webpack serve",
-    "postinstall": "[ -n \"$CI\" ] || [ ! -f node_modules/.bin/husky ] || husky install",
-    "prepublishOnly": "[ -n \"$CI\" ] || [ ! -f node_modules/.bin/pinst ] || pinst --disable",
-    "postpublish": "[ -n \"$CI\" ] || [ ! -f node_modules/.bin/pinst ] || pinst --enable"
+    "watch": "yarn kill && NODE_ENV=none DEV_SERVER_PORT=$npm_package_port webpack serve"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
